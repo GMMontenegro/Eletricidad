@@ -590,6 +590,18 @@ input {
   width: 15rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .flex-col {
   flex-direction: column;
 }
