@@ -1,6 +1,6 @@
-
+console.log("Made by @m_biiiel")
 function calc() {
-    let f = parseInt(document.getElementById("Frecuencia").value);
+    let f = parseFloat(document.getElementById("Frecuencia").value);
 
     let l = parseFloat(document.getElementById("Bobina").value);
 
@@ -15,16 +15,23 @@ function calc() {
     let sxc = subStr(xc.toString(), casa);
     let sxl = subStr(xl.toString(), casa);
 
+    let r = parseFloat(document.getElementById("resistencia").value);
+
+    let r2 = r * r;
+    let xl2 = (xl - xc) * (xl - xc);
+
+    let z = Math.sqrt(r2 + xl2);
+    let zc = subStr(z.toString(), casa);
     const result = document.querySelector("#result")
 
-    let value = "XL: "+sxl+" XC: "+sxc;
+    let value = "XL: "+sxl+" XC: "+sxc+ " Z: "+zc
 
     result.value = value;
     // document.getElementById("result").value = "XL: "+xl+" XC: "+xc;
 }
 
 function subStr(str, casa) {
-
+    casa = casa + 1;
     for (let i = 0; i < str.length; i++) {
         if (str[i] === ".") {
             return str.substring(0, i + casa);

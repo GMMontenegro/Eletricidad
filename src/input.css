@@ -5,10 +5,10 @@
 
 @layer components {
     span{
-        @apply text-6xl m-10;
+        @apply text-4xl m-8;
     }
     input{
-        @apply w-[50%] border-b-[3px] h-20 my-6 text-4xl;
+        @apply w-[50%] border-b-[3px] h-18 my-6 text-4xl;
     }
 }
 
